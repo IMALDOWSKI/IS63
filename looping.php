@@ -1,4 +1,5 @@
 <?php
+
 ### FOR ###
 echo "FOR";
 echo "<br>";
@@ -33,13 +34,15 @@ do{
 }while($dw <= 10);
 echo "<hr>";
 
-
-
-
-
-
-
-
+### FOREACH ###
+echo "FOREACH";
+echo "<br>";
+echo "<br>";
+$is63 = array("Habiel Hama", "Kiki Gemoy", "Mahfud");
+foreach($is63 as $data){
+    echo "$data <br>";
+}
+echo "<hr>";
 
 
 
