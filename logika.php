@@ -66,40 +66,52 @@
     
     ##### SWITCH #####
     
-    switch($hari){
-        case 1:
-            echo "Hari Minggu";
-            break;
+    //switch($hari){
+        //case 1:
+          //  echo "Hari Minggu";
+            //break;
 
-        case 2:
-            echo "Hari Senin";
-            break;
+        //case 2:
+        //    echo "Hari Senin";
+        //    break;
 
-        case 3:
-            echo "Hari Selasa";
-            break;
+        //case 3:
+          //  echo "Hari Selasa";
+            //break;
 
-        case 4:
-            echo "Hari Rabu";
-            break;
+        //case 4:
+          //  echo "Hari Rabu";
+            //break;
 
-        case 5:
-            echo "Hari Kamis";
-            break;
+        //case 5:
+          //  echo "Hari Kamis";
+            //break;
 
-        case 6:
-            echo "Hari Jumat";
-            break;
+        //case 6:
+          //  echo "Hari Jumat";
+            //break;
 
-        case 7:
-            echo "Hari Sabtu";
-            break;
+        //case 7:
+          //  echo "Hari Sabtu";
+            //break;
 
-        default:
-            echo "Hari Tidak Diketahui";
-    }    
+        //default:
+          //  echo "Hari Tidak Diketahui";
+    //}    
 
-    
+            
+    //LOOPING//
+    //ada dua jenis looping:
+    //1.yang memiliki nilai batas
+    //2.yang tidak memiliki nilai batas
+
+    //function looping di php:
+    //1.for
+    //2.while
+    //3.do while
+    //4.foreach
+
+    // 3 komponen yang wajib ada di perulangan for:
     ?>
 
 </body>
