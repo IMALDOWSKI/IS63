@@ -41,7 +41,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inputTanggalLahir" class="form-label">Tanggal Lahir</label>
-                                <input name="tgl_lahir" class="form-control" id="inputTanggalLahir">
+                                <input name="tanggal_lahir="form-control" id="inputTanggalLahir">
                             </div>
                             <div class="mb-3">
                                 <label for="inputAlamat" class="form-label">Alamat</label>
@@ -56,6 +56,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inputJenisKelamin" class="form-label">Jenis Kelamin</label>
+                               <input name="jenis_kelamin" type="jenis_kelamin" class="form-control" id="inputJenisKelamin">
                                 <select class="form-control" id="inputJenisKelamin">
                                     <option value="laki-laki">Laki-laki</option>
                                     <option value="perempuan">Perempuan</option>
