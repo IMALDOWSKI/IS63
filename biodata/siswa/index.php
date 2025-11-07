@@ -7,6 +7,8 @@
     <title>Biodata Siswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/all.css">
 </head>
 
 <body style="background-color:#d1e6d4">
@@ -20,6 +22,7 @@
                 <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
                         <b>BIODATA SISWA</b>
+                        <a href="form_tambah.php" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-user-plus"></i> Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -44,14 +47,20 @@
                                 $tampil = mysqli_query($koneksi,$qry);
 
                                 #4. looping hasil query
+                                $nomor = 1;
                                 foreach($tampil as $data){
 
                                 ?>
                                 <tr>
-                                    <th scope="row">1</th>
+                                    <th scope="row"><?=$nomor++?></th>
                                     <td><?=$data['nama']?></td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td><?=$data['nisn']?></td>
+                                    <td><?=$data['tgl_lahir']?></td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        <button class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
                                 </tr>
                                 <?php
                                 }
@@ -69,6 +78,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../js/all.js"></script>
 </body>
 
 </html>

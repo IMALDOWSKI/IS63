@@ -1,12 +1,12 @@
 <?php 
     #1. Meng-koneksikan PHP ke MySql
-    include("koneksi.php");
+    include("../koneksi.php");
 
     #2. Mengambil value dari form tambah
     $nama = $_POST['nama'];
     $nisn = $_POST['nisn'];
     $tempat_lahir = $_POST['tempat_lahir'];
-    $tanggal_lahir = $_POST['tanggal_lahir'];
+    $tanggal_lahir = $_POST['tgl_lahir'];
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
