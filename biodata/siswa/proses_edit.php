@@ -6,16 +6,20 @@
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $nisn = $_POST['nisn'];
-    $tp_lahir = $_POST['tp_lahir'];
-    $tg_lahir = $_POST['tg_lahir'];
+    $tempat_lahir = $_POST['tempat_lahir'];
+    $tgl_lahir = $_POST['tgl_lahir'];
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
-    $jk = $_POST['jk'];
-    $jur = $_POST['jur'];
+    $jenis_kelamin = $_POST['jenis_kelamin'];
+    $jurusan = $_POST['jurusan'];
+    $nama_foto = $_FILES['foto']['name'];
+    $tmp_foto = $_FILES['foto']['tmp_name'];
+
+
 
     #3. Query Insert (proses tambah data)
-    $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tp_lahir='$tp_lahir', 
-    tg_lahir='$tg_lahir', alamat='$alamat', email='$email', jk='$jk',  jur='$jur' 
+    $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tempat_lahir='$tempat_lahir', 
+    tgl_lahir='$tgl_lahir', alamat='$alamat', email='$email', jenis_kelamin='$jenis_kelamin',  jurusan='$jurusan', foto='$nama_foto'
     WHERE id='$id'";
 
     $tambah = mysqli_query($koneksi,$query);
@@ -26,4 +30,6 @@
     }else{
         echo "Data Gagal ditambah";
     }
+
+    move_uploaded_file($tmp_foto, "../gambar/".$nama_foto);
 ?>

@@ -43,12 +43,12 @@ $data = mysqli_fetch_array($edit);
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tempat Lahir</label>
-                                <input value="<?=$data['tp_lahir']?>" name="tp_lahir" type="text" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['tempat_lahir']?>" name="tempat_lahir" type="text" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
-                                <input value="<?=$data['tg_lahir']?>" name="tg_lahir" type="date" class="form-control" id="exampleInputEmail1"
+                                <input value="<?=$data['tgl_lahir']?>" name="tgl_lahir" type="date" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
@@ -65,12 +65,12 @@ $data = mysqli_fetch_array($edit);
                                 <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                                 <br>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jk" <?php echo $data['jk']=='Laki-laki' ? 'checked' : '' ?>
+                                    <input class="form-check-input" type="radio" name="jenis_kelamin" <?php echo $data['jenis_kelamin']=='Laki-laki' ? 'checked' : '' ?>
                                         id="inlineRadio1" value="Laki-laki">
                                     <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="jk" <?php echo $data['jk']=='Perempuan' ? 'checked' : '' ?>
+                                    <input class="form-check-input" type="radio" name="jenis_kelamin" <?php echo $data['jenis_kelamin']=='Perempuan' ? 'checked' : '' ?>
                                         id="inlineRadio2" value="Perempuan">
                                     <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                                 </div>
@@ -79,9 +79,9 @@ $data = mysqli_fetch_array($edit);
                                 <label for="exampleInputEmail1" class="form-label">Jurusan</label>
                                 <select class="form-control" name="jur" id="">
                                     <option value="">-Pilih Jurusan-</option>
-                                    <option <?php echo $data['jur']=='IPA' ? 'selected' : '' ?> value="IPA">IPA</option>
-                                    <option <?php echo $data['jur']=='IPS' ? 'selected' : '' ?> value="IPS">IPS</option>
-                                    <option <?php echo $data['jur']=='Bahasa' ? 'selected' : '' ?> value="Bahasa">Bahasa</option>
+                                    <option <?php echo $data['jurusan']=='IPA' ? 'selected' : '' ?> value="IPA">IPA</option>
+                                    <option <?php echo $data['jurusan']=='IPS' ? 'selected' : '' ?> value="IPS">IPS</option>
+                                    <option <?php echo $data['jurusan']=='Bahasa' ? 'selected' : '' ?> value="Bahasa">Bahasa</option>
                                 </select>
                             </div>
                             <div class="mb-3">
