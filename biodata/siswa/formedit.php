@@ -88,6 +88,7 @@ $data = mysqli_fetch_array($edit);
                                 <label for="exampleInputEmail1" class="form-label">Foto</label>
                                 <input name="foto" type="file" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Abaikan jika foto tidak diubah</div>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

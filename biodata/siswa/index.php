@@ -73,7 +73,7 @@
                                                 <table class="table">
                                                 <tbody>
                                                     <tr>
-                                                        <td colspan="row"><img src="../gambar/<?=$data['foto']?>" alt="" height="150"></td>
+                                                        <td colspan="2"><img src="../fotosiswa/<?=$data['foto']?>" height="150" alt=""></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Nama</td>
