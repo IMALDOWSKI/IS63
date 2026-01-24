@@ -55,7 +55,7 @@
                                     <th scope="row"><?=$nomor++?></th>
                                     <td><?=$data['nama']?></td>
                                     <td><?=$data['nisn']?></td>
-                                    <td><?=$data['tgl_lahir']?></td>
+                                    <td><?=$data['tg_lahir']?></td>
                                     <td>
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['id']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         <a href="formedit.php?id=<?=$data['id']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -85,11 +85,11 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Tempat Lahir</td>
-                                                        <th scope="row"><?=$data['tempat_lahir']?></th>
+                                                        <th scope="row"><?=$data['tp_lahir']?></th>
                                                     </tr>
                                                     <tr>
                                                         <td>Tanggal Lahir</td>
-                                                        <th scope="row"><?=$data['tgl_lahir']?></th>
+                                                        <th scope="row"><?=$data['tg_lahir']?></th>
                                                     </tr>
                                                     <tr>
                                                         <td>Alamat</td>
@@ -101,7 +101,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Jenis Kelamin</td>
-                                                        <th scope="row"><?=$data['jenis_kelamin']?></th>
+                                                        <th scope="row"><?=$data['jk']?></th>
                                                     </tr>
                                                 </tbody>
                                                 </table>

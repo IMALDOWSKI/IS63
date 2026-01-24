@@ -9,24 +9,20 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #092054;">
-
+<body style="background-color:#d1e6d4">
     <?php
     include_once("navbar.php");
     ?>
 
     <div class="container">
-        <div class="row mt-3">
-            <div class="col-15">
-                <div class="card">
+        <div class="row my-5">
+            <div class="col-8 m-auto">
+                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div class="card-header">
-                        ImaldowsForm's
+                        <b>APLIKASI BIODATA SISWA</b>
                     </div>
                     <div class="card-body">
-                        <h2 class="card-title">SELAMAT DATANG DI APLIKASI BIODATA SISWA</h2>
-
-
-                        </form>
+                        <h2>Selamat Datang di Aplikasi Biodata Siswa</h2>
                     </div>
                 </div>
             </div>
