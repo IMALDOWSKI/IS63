@@ -9,9 +9,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/biodata/siswa/">Siswa</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/siswa/">Siswa</a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/jurusan/">Jurusan</a>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
