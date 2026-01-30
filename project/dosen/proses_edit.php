@@ -34,7 +34,7 @@
         // }
 
         #tambahkan foto
-        move_uploaded_file($tmp_foto,"../fotosiswa/$nama_foto");
+        move_uploaded_file($tmp_foto,"../fotodosen/$nama_foto");
     }else{
         #3. Query Insert (proses edit data)
         $query = "UPDATE dosen SET nama='$nama', nisn='$nidn', rumpun='$rumpun', 
