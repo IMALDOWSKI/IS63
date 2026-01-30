@@ -15,7 +15,7 @@
     $tmp_foto = $_FILES['foto']['tmp_name'];
 
     #3. Query Insert (proses tambah data)
-    $query = "INSERT INTO biodata (nama,nisn,tp_lahir,tg_lahir,alamat,email,jk,jur,foto) 
+    $query = "INSERT INTO biodata (nama,nisn,tp_lahir,tg_lahir,alamat,email,jk,jurusans_id,foto)  
     VALUES ('$nama','$nisn','$tp_lahir','$tg_lahir','$alamat','$email','$jk','$jur','$nama_foto')";
 
     move_uploaded_file($tmp_foto,"../fotosiswa/$nama_foto");
