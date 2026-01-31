@@ -86,6 +86,10 @@
                                 </select>
                             </div>
                             <div class="mb-3">
+                                 <label for="tgl_daftar" class="form-label">Tanggal Daftar</label>
+                                 <input name="tgl_daftar" type="date" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Foto</label>
                                 <input name="foto" accept="image/*" type="file" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">

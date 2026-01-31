@@ -17,6 +17,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/dosen/">dosen</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/gelombang/">Gelombang Pendaftaran</a>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

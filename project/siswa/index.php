@@ -14,6 +14,22 @@
 <body style="background-color:#d1e6d4">
     <?php
     include_once("../navbar.php");
+    
+    // FUNGSI untuk menampilkan detail gelombang
+    function tampilkanGelombang($gelombang) {
+        switch($gelombang) {
+            case 1:
+                return "Gelombang 1 (Januari - Maret)";
+            case 2:
+                return "Gelombang 2 (April - Juni)";
+            case 3:
+                return "Gelombang 3 (Juli - September)";
+            case 4:
+                return "Gelombang 4 (Oktober - Desember)";
+            default:
+                return "Gelombang " . $gelombang;
+        }
+    }
     ?>
 
     <div class="container">
@@ -33,6 +49,7 @@
                                     <th scope="col">NISN</th>
                                     <th scope="col">Jurusan</th>
                                     <th scope="col">Tanggal Lahir</th>
+                                    <th scope="col">Gelombang</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -58,6 +75,7 @@
                                     <td><?=$data['nisn']?></td>
                                     <td><?=$data['nama_jurusan']?></td>
                                     <td><?=$data['tg_lahir']?></td>
+                                    <td><span class="badge bg-primary"><?=tampilkanGelombang($data['gelombang'])?></span></td>
                                     <td>
                                         <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$data['ids']?>"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         <a href="formedit.php?id=<?=$data['ids']?>" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -92,6 +110,16 @@
                                                     <tr>
                                                         <td>Tanggal Lahir</td>
                                                         <th scope="row"><?=$data['tg_lahir']?></th>
+                                                    </tr>
+                                                    <?php if(isset($data['tgl_daftar']) && $data['tgl_daftar'] != null): ?>
+                                                    <tr>
+                                                        <td>Tanggal Daftar</td>
+                                                        <th scope="row"><?=$data['tgl_daftar']?></th>
+                                                    </tr>
+                                                    <?php endif; ?>
+                                                    <tr>
+                                                        <td>Gelombang</td>
+                                                        <th scope="row"><span class="badge bg-primary"><?=tampilkanGelombang($data['gelombang'])?></span></th>
                                                     </tr>
                                                     <tr>
                                                         <td>Alamat</td>
