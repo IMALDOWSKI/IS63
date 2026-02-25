@@ -9,16 +9,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/siswa/">Siswa</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/biodata/siswa/index.php">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/jurusan/">Jurusan</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/biodata/jurusan/index.php">Jurusan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/dosen/">dosen</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/biodata/dosen/index.php">dosen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/project/gelombang/">Gelombang Pendaftaran</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/IS63/biodata/gelombang/index.php">Gelombang Pendaftaran</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
