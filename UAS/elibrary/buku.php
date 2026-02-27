@@ -305,6 +305,11 @@ include 'header.php';
     </div>
     <form method="POST" enctype="multipart/form-data">
       <input type="hidden" name="action" value="tambah">
+      <?php if ($msg && $msg['type'] !== 'success' && ($_POST['action'] ?? '') === 'tambah'): ?>
+        <div class="alert alert-danger" style="margin-bottom:16px;font-size:13px;">
+          <?= $msg['text'] ?>
+        </div>
+      <?php endif; ?>
       <div class="form-grid">
 
         <div class="form-group full">
@@ -391,6 +396,11 @@ include 'header.php';
       <input type="hidden" name="action" value="update">
       <input type="hidden" name="id_buku" id="edit_id_buku">
       <input type="hidden" name="cover_lama" id="edit_cover_lama">
+      <?php if ($msg && $msg['type'] !== 'success' && ($_POST['action'] ?? '') === 'update'): ?>
+        <div class="alert alert-danger" style="margin-bottom:16px;font-size:13px;">
+          <?= $msg['text'] ?>
+        </div>
+      <?php endif; ?>
       <div class="form-grid">
 
         <div class="form-group full">
@@ -532,9 +542,43 @@ function confirmDelete(id, judul) {
   openModal('modalHapus');
 }
 
-<?php if ($msg && isset($_POST['action']) && $_POST['action'] === 'tambah' && $msg['type'] !== 'success'): ?>
-// Re-open tambah modal if validation failed
-openModal('modalTambah');
+<?php if ($msg && $msg['type'] !== 'success'): ?>
+  <?php
+    $failed_action = $_POST['action'] ?? '';
+    $reopen_modal  = '';
+    if ($failed_action === 'tambah')  $reopen_modal = 'modalTambah';
+    if ($failed_action === 'update')  $reopen_modal = 'modalEdit';
+  ?>
+  <?php if ($reopen_modal): ?>
+    openModal('<?= $reopen_modal ?>');
+    <?php if ($failed_action === 'update' && isset($_POST['id_buku'])): ?>
+    // Re-populate edit modal fields after failed update
+    var reEditData = {
+      id_buku:       <?= intval($_POST['id_buku']) ?>,
+      judul_buku:    <?= json_encode($_POST['judul_buku'] ?? '') ?>,
+      pengarang:     <?= json_encode($_POST['pengarang'] ?? '') ?>,
+      isbn:          <?= json_encode($_POST['isbn'] ?? '') ?>,
+      tahun_terbit:  <?= json_encode($_POST['tahun_terbit'] ?? '') ?>,
+      jumlah_halaman:<?= json_encode($_POST['jumlah_halaman'] ?? '') ?>,
+      stok:          <?= json_encode($_POST['stok'] ?? '') ?>,
+      id_penerbit:   <?= json_encode($_POST['id_penerbit'] ?? '') ?>,
+      id_kategori:   <?= json_encode($_POST['id_kategori'] ?? '') ?>,
+      cover_buku:    <?= json_encode($_POST['cover_lama'] ?? '') ?>
+    };
+    openEdit(reEditData);
+    <?php endif; ?>
+    <?php if ($failed_action === 'tambah'): ?>
+    // Re-populate tambah form fields
+    document.querySelector('#modalTambah [name="judul_buku"]').value    = <?= json_encode($_POST['judul_buku'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="pengarang"]').value     = <?= json_encode($_POST['pengarang'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="isbn"]').value          = <?= json_encode($_POST['isbn'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="tahun_terbit"]').value  = <?= json_encode($_POST['tahun_terbit'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="jumlah_halaman"]').value= <?= json_encode($_POST['jumlah_halaman'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="stok"]').value          = <?= json_encode($_POST['stok'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="id_penerbit"]').value   = <?= json_encode($_POST['id_penerbit'] ?? '') ?>;
+    document.querySelector('#modalTambah [name="id_kategori"]').value   = <?= json_encode($_POST['id_kategori'] ?? '') ?>;
+    <?php endif; ?>
+  <?php endif; ?>
 <?php endif; ?>
 </script>
 
